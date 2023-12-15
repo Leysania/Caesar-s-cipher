@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Шифр Цезаря</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <script src="main.js"></script>
+
+                <div class="block" id="right1">
+                    <label for="key-input">Введите ключ:</label>
+                    <input type="number" id="key-input"><br>
+                </div>
+
+                <div class="block" id="right2">
+                    <label class="lang" for="language-select">Выберите язык текста:</label>
+                    <select id="language-select">
+                      <option value="russian">Русский</option>
+                      <option value="english">English</option>
+                    </select>
+                </div>
+
+            
+                <div class="block" id="bottom">
+                    <button  class="buttonAll" onclick="encrypt()">Зашифровать</button>
+                    <button class="buttonAll" onclick="decrypt()">Расшифровать</button> 
+
+                    <button class="button" onclick="breakCipher()"> 
+                      <span>Взломать </span>
+                      <span>перебором</span>
+                    </button>
+
+                    <button class="button1" onclick="breakCipher1()">
+                      <span>Взломать </span>
+                      <span>частотным анализом</span>  
+                    </button>
+                </div>
+            
+
+                <div id="textIn">
+                    <label for="text-input">Введите текст, который вы хотите зашифровать/расшифровать:</label><br>
+                    <textarea rows="8" cols="60" id="text-input"></textarea>
+                </div>
+
+                <div id="res">
+                    <label for="result">Результат:</label><br>
+                    <textarea rows="8" cols="60" id="result"></textarea>
+                </div>
+ 
+    </body>
+</html>
